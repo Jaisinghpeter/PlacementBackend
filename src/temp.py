@@ -1,0 +1,25 @@
+# initializing list 
+import json
+test_list = [1, 4, 6, 7, 2] 
+question1={}
+question3={}
+question={'Aptitude': {'Total_qs': 5, 'Questions': [{'Question': {'Question': 'A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the train?', 'Option1': '120 metres', 'Option2': '180 metres', 'Option3': '324 metres', 'Option4': '150 metres', 'qsid': 1}}, {'Question': {'Question': 'A train 125 m long passes a man, running at 5 km/hr in the same direction in which the train is going, in 10 seconds. The speed of the train is:', 'Option1': '45 km/hr', 'Option2': '50 km/hr', 'Option3': '54 km/hr', 'Option4': '55 km/hr', 'qsid': 2}}, {'Question': {'Question': 'The length of the bridge, which a train 130 metres long and travelling at 45 km/hr can cross in 30 seconds, is:', 'Option1': '200 m', 'Option2': '225 m', 'Option3': '245 m', 'Option4': '250 m', 'qsid': 3}}, {'Question': {'Question': 'Two trains running in opposite directions cross a man standing on the platform in 27 seconds and 17 seconds respectively and they cross each other in 23 seconds. The ratio of their speeds is:', 'Option1': '1 ; 3', 'Option2': '3 ; 2', 'Option3': '3 ; 4', 'Option4': 'None of the above', 'qsid': 4}}, {'Question': {'Question': 'A train passes a station platform in 36 seconds and a man standing on the platform in 20 seconds. If the speed of the train is 54 km/hr, what is the length of the platform?', 'Option1': '120 m', 'Option2': '240 m', 'Option3': '300 m', 'Option4': 'None of the above', 'qsid': 5}}]}, 'Technical': {'Total_qs': 5, 'Questions': [{'Question': {'Question': 'Which will legally declare, construct, and initialize an array?', 'Option1': 'int [] myList = {"1", "2", "3"};', 'Option2': 'int [] myList = (5, 8, 2);', 'Option3': 'int myList [] [] = {4,9,7,0};', 'Option4': 'int myList [] = {4, 3, 7};', 'qsid': 6}}, {'Question': {'Question': 'Which is a reserved word in the Java programming language?', 'Option1': 'method', 'Option2': 'native', 'Option3': 'reference', 'Option4': 'array', 'qsid': 7}}, {'Question': {'Question': 'Which is a valid keyword in java?', 'Option1': 'interface', 'Option2': 'string', 'Option3': 'Float', 'Option4': 'unsigned', 'qsid': 8}}, {'Question': {'Question': 'public class Foo \n{  \n    public static void main(String[] args) \n    {\n        try \n        { \n            return; \n        } \n        finally \n        {\n            System.out.println( "Finally" ); \n        } \n    } \n}', 'Option1': 'The code runs with no output.', 'Option2': 'Compilation fails.', 'Option3': 'Finally', 'Option4': 'An exception is thrown at runtime.', 'qsid': 9}}, {'Question': {'Question': 'public class X \n{  \n    public static void main(String [] args) \n    {\n        try \n        {\n            badMethod();  \n            System.out.print("A"); \n        }  \n        catch (Exception ex) \n        {\n            System.out.print("B");  \n        } \n        finally \n        {\n            System.out.print("C"); \n        } \n        System.out.print("D"); \n    }  \n    public static void badMethod() \n    {\n        throw new Error(); /* Line 22 */\n    } \n}\n', 'Option1': 'ABCD', 'Option2': 'Compilation fails.', 'Option3': 'BC is printed before exiting with an error message.', 'Option4': 'C is printed before exiting with an error message.', 'qsid': 10}}]}, 'Reasoning': {'Total_qs': 5, 'Questions': [{'Question': {'Question': 'Look at this series: 2, 1, (1/2), (1/4), ... What number should come next?', 'Option1': '(1/3)', 'Option2': '(1/8)', 'Option3': '(2/8)', 'Option4': '(1/16)', 'qsid': 11}}, {'Question': {'Question': 'Look at this series: 7, 10, 8, 11, 9, 12, ... What number should come next?', 'Option1': 7, 'Option2': 10, 'Option3': 12, 'Option4': 13, 'qsid': 12}}, {'Question': {'Question': 'Look at this series: 36, 34, 30, 28, 24, ... What number should come next?', 'Option1': 20, 'Option2': 26, 'Option3': 23, 'Option4': 22, 'qsid': 13}}, {'Question': {'Question': 'Look at this series: 22, 21, 23, 22, 24, 23, ... What number should come next?', 'Option1': 22, 'Option2': 24, 'Option3': 25, 'Option4': 26, 'qsid': 14}}, {'Question': {'Question': 'Look at this series: 53, 53, 40, 40, 27, 27, ... What number should come next?', 'Option1': 14, 'Option2': 12, 'Option3': 27, 'Option4': 53, 'qsid': 15}}]}}
+y=json.loads(question)
+for qs in y:
+    print(qs)
+# printing original list  
+print ("Original list : " + str(test_list)) 
+  
+# using slicing to left rotate by 3 
+test_list = test_list[int(n/2):] + test_list[:int(n/2)] 
+  
+# Printing list after left rotate 
+print ("List after left rotate by 3 : " + str(test_list)) 
+  
+# using slicing to right rotate by 3 
+# back to Original 
+test_list = test_list[-3:] + test_list[:-3] 
+  
+# Printing after right rotate 
+print ("List after right rotate by 3(back to original) : "
+                                         + str(test_list)) 
